@@ -142,11 +142,17 @@ Zvolil jsem následující vlastnosti, které je možné dědit:
 •	RoamingRange
 •	MovementSpeed
 Zde je seznam tříd, které mají do činění s genetikou a jejich využití:
+
 •	Třída BaseTraitSettings
+
 Tato umožňuje uživateli nastavit pro každou vlastnost průměrnou hodnotu, a hodnotu standardní odchylky. Z těchto hodnot budou dědičné vlastnosti spočítány zvířatům, které byla instanciována na začátku, a nemají tedy rodiče. Tato třída je statická, protože se její hodnoty nastaví před spuštění simulace, a za běhu už se v ní nic nemění.
+
 •	Třída HereditaryInformation
+
 Obsahuje hodnoty všech dědičných vlastností, každé zvíře má v sobě uloženou jednu instanci.
+
 •	Třída Pregnancy
+
 Každá instance této třídy popisuje jednu instanci probíhajícího těhotenství. Když těhotenství vzniká, metoda této třídy CombineGenes z rodičovských instancí HereditaryInformation spočítá novou instanci HereditaryInformation, která bude nastavena dětem. Metoda CombineGenes bere jako parametr delegáta CalculateGenes, kam se může dosadit libovolná metoda, která z průměrné/standardní hodnoty a hodnoty odchylky spočítá novou hodnotu dané vlastnosti. Ve svém programu tam dosazuji Gaussovo rozdělení.
 
 ### 2.8 Vizualizace dat
@@ -160,6 +166,6 @@ Kvůli nedostatku času jsem nestihl naprogramovat popisky na osách grafu. Prin
 ### 2.10 Shrnutí
 Myslím, že se mi celkově podařilo dosáhnout toho, o co jsem usilovat: kompletní přepracování minulého programu tak, aby byl komplexnější, využíval pokročilejších konceptů, a zároveň byl vizuálně atraktivnější, než ten minulý. Zakončil jsem tím sérii tří zápočtových programů, které se věnovali vývoji organismů:
 •	První byl v Pythonu v prostředí pygame, kde buňky byly pouze 2D
-•	Druhý už byl v Unity, s
+•	Druhý už byl v Unity, buňky byly 3D, ale jen jeden druh.
 
  
