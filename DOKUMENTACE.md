@@ -1,4 +1,5 @@
 # Dokumentace: Simple Ecosystem Simulation
+*64 KB*
 
 ## Uživatelská část
 
